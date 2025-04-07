@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistema de inventarios</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<audio id="musicaFondo" src="audio.mp3"></audio>
+
+  
+<body>
+  <!-- primera pantalla -->
+  <div id="particles-js"></div>
+  <section class="intro">
+    <div class="contenido">
+      <span class="txt texto1">TE QUIERO MUCHO</span>
+      <span class="txt texto2">MI ALEEBU</span>
+      <div class="barra">
+        <div class="progreso"></div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+
+  <!-- segunda pantalla -->
+  <section class="info">
+    <header>
+      <a href="dashboard.html"><i class="fa-solid fa-house-user"></i></a>
+    </header>
+
+    <div class="texto">
+        
+      <h3>MI MUÑEQUITA</h3>
+      <h1>ALEEBU <i class="fa-solid fa-heart corazon-latiendo" style="color: #b966f0; font-size: 120px; margin-left: 20px;"></i></h1> 
+      <p class="firma">Con todo mi amor, tu ChikyBu </p>
+    </div>
+
+    
+    <div class="items">
+      <div class="opcion item1">
+        <h4 class="titulo-cancion">🎵 LADY MI AMOR - Feid</h4>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/30Xh83fw03PZ2Wfm36H4EZ?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>        <div class="base"></div>
+      </div>
+      <div class="opcion item2">
+        <h4 class="titulo-cancion">🎵 CALIFORNIA - Feid</h4>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/19iUrnYyBAG5LaxT72ajsM?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>        <div class="base"></div>
+      </div>
+      <div class="opcion item3">
+        <h4 class="titulo-cancion">🎵 AMOR DE MI VIDA - Feid</h4>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2C6eINAA8cO6e5a8PjnWsK?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>        <div class="base"></div>
+      </div>
+    </div>
+
+    
+
+    <div class="mitad-dorado"></div>
+    <img src="fp.png" alt="" class="foto-principal" id="imagenPrincipal">
+    <div class="spotify-lado-img">
+        <a href="https://open.spotify.com/playlist/2E5BzgP6qpeK4EWvYikvZP?si=700e7a2776054fdf"  target="_blank" class="btn-spotify" title="AleeBu. By xChikyBu"> <i class="fa-brands fa-spotify icono-balanceo"></i>
+</a>
+
+      </div>
+      
+  </section>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 20,
+          "density": {
+            "enable": true,
+            "value_area": 700
+          }
+        },
+        "color": { "value": "#a64ca6" }, // morado como el que palpita
+        "shape": {
+          "type": "image",
+          "image": {
+            "src": "https://cdn-icons-png.flaticon.com/512/833/833472.png",
+            "width": 32,
+            "height": 32
+          }
+        },
+        "opacity": {
+          "value": 0.85,
+          "random": true,
+          "anim": {
+            "enable": true,
+            "speed": 0.4,
+            "opacity_min": 0.3,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 20,
+          "random": true
+        },
+        "move": {
+          "enable": true,
+          "speed": 1,
+          "direction": "bottom",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "push" // más corazones al pasar el mouse
+          },
+          "onclick": { "enable": false },
+          "resize": true
+        },
+        "modes": {
+          "push": {
+            "particles_nb": 4 // cantidad de corazones extra por hover
+          }
+        }
+      },
+      "retina_detect": true
+    });
+    </script>
+    
+      
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const audio = document.getElementById("musicaFondo");
+          const imagen = document.getElementById("imagenPrincipal");
+      
+          audio.volume = 0.3; // Volumen suave
+      
+          imagen.addEventListener('click', () => {
+            audio.play().then(() => {
+              console.log("🎶 Audio reproduciéndose al hacer clic en la imagen");
+            }).catch(err => {
+              console.warn("⚠️ No se pudo reproducir", err);
+            });
+          });
+        });
+      </script>
+      
+      
+      
+  
+</body>
+</html>
